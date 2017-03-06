@@ -9,7 +9,7 @@ a.s1, a.s2		{vertical-align: middle;}
 p.top 			{font-weight: 600; text-align: center;}
 td.menu 		{vertical-align: top;}
 td.menu table table 	{height: 350px;}
-td.menu table table td, td.styl {height: 50px; text-align: center;}
+td.menu table table td, td.styl {height: 50px; text-align: center; font-weight: 600;}
 td.main 		{vertical-align: top;}
 td.main p.s1 		{text-align: center; font-weight: 600; padding-top: 5;}
 td.main p.s2 		{text-align: center; font-weight: 600;}
