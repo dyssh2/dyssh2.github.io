@@ -15,24 +15,7 @@ td.main p.s1 		{text-align: center; font-weight: 600; padding-top: 5;}
 td.main p.s2 		{text-align: center; font-weight: 600;}
 td.main p.s3 		{text-indent: 40;}
 td.main img 		{float: right;}
-b                   {color:red; font-size: 25px;}
-b2                  {color:blue; font-size: 35px;}
- e 
-  {
-  text-decoration: none; /*убираем подчеркивание текста ссылок*/
-  background:#30A8E6; /*добавляем фон к пункту меню*/ 
-  color:#fff; /*меняем цвет ссылок*/
-  padding:10px; /*добавляем отступ*/
-  font-family: arial; /*меняем шрифт*/
-  border-radius:4px; /*добавляем скругление*/
-  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
-  -o-transition: all 0.3s 0.01s ease;
-  -webkit-transition: all 0.3s 0.01s ease;
-  }
-e:hover 
-  {
-  background:#1C85BB;/*добавляем эффект при наведении*/
-  }
+
 
 
 
