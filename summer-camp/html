@@ -1,1 +1,12 @@
-
+<!summer-camp.html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Летний оздоровительный лагерь | МБУ ДО СШ 2 г. Кирова</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Летний спортивный лагерь 2024</h1>
+    <p>Информация о программе, стоимости и записи...</p>
+</body>
+</html>
