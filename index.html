@@ -1,87 +1,226 @@
-﻿<html  background="pic/ff1.jpg">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>МБУ ДО СШ № 2. Спортивная школа № 2 города Кирова. Сведения</title>
- <link rel="icon" href="pic/Icon.ico" type="ico" />
- <link type="text/css" rel="stylesheet" media="screen" href="styledoc/core.css" />
- <link type="text/css" rel="stylesheet" media="screen" title="style-norm" href="styledoc/style-norm.css" />
- <link type="text/css" rel="stylesheet" media="screen" title="style-big" href="styledoc/style-big.css" />
- <script type="text/javascript" src="styledoc/jquery.js"></script>
- <script type="text/javascript" src="styledoc/switch.js"></script>
+<meta charset="utf-8">
+<title>МБУ ДО СШ № 2 — Спортивная школа №2 города Кирова</title>
+
+<link rel="icon" href="pic/Icon.ico">
+
+<style>
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: url("pic/ff1.jpg") center / cover fixed;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== LAYOUT ===== */
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255,255,255,0.95);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 25px 15px;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+}
+
+header p {
+  font-size: 18px;
+}
+
+header p:last-child {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* ===== MAIN ===== */
+.main {
+  display: flex;
+  flex: 1;
+}
+
+/* ===== MENU ===== */
+nav {
+  width: 220px;
+  background: #f3f6fb;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+nav a {
+  display: block;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: #1e3c72;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background: #1e3c72;
+  color: #fff;
+}
+
+/* ===== CONTENT ===== */
+section {
+  flex: 1;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e3c72;
+}
+
+.info p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.info p strong {
+  color: #1e3c72;
+}
+
+/* ===== CONTACTS ===== */
+.contacts p {
+  padding-left: 20px;
+}
+
+/* ===== SOCIAL ===== */
+.social {
+  margin: 30px 0;
+}
+
+.social img {
+  height: 45px;
+}
+
+/* ===== MAP ===== */
+.map {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f3f6fb;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    margin: 5px;
+  }
+}
+</style>
 </head>
 
 <body>
-<table width="*" height="*">
-<tr height="50"><td colspan=4>
-<p class="top">Муниципальное бюджетное учреждение дополнительного образования </p>
-<p class="top"> "Спортивная Школа №2" города Кирова </p>
-</td>
 
-<tr height="*"><td width="*">&nbsp</td>
-<td width="150" class="menu"><table height="*">
-<tr><td height="350"><table>
-<tr><td><a href="index.html">Сведения</a></td></tr>
-<tr><td><a href="news.html">Новости</a></td></tr>
-<tr><td><a href="sost.html">Состав</a></td></tr>
-<tr><td><a href="doc.html">Документы</a></td></tr>
-<tr><td><a href="obr.html">Виды спорта</a></td></tr>
-<tr><td><a href="osn.html">Оснащенность</a></td></tr>
-<tr><td><a href="std.html">Стенд</a></td></tr>
-<tr><td><a href="ant.html">Антикоррупционная политика</a></td></tr>
-<tr><td><a href="vak.html">Гражданам</a></td></tr>
-<tr><td><a href="summer-camp.html">Летний лагерь 2025</a></td></tr>
-<tr><td><a href="politikapersdan.html"> Политика персональных данных </a></td></tr></table></td></tr>
- 
-<tr><td height="*"><font size=0>&nbsp</font></td></tr>
-<tr><td class="styl" height="50"><a href="#" rel="style-big" class="styleswitch s1">Слабовидящим</a><a href="#" rel="style-norm" class="styleswitch s2"> Обычный</a></td></tr>
-</table>
+<div class="wrapper">
 
+<header>
+  <p>Муниципальное бюджетное учреждение дополнительного образования</p>
+  <p>«Спортивная школа №2» города Кирова</p>
+</header>
 
-</td><td width="750" class="main">
-<br/><br/>
-<p class="s1">Основные сведения</p>
-<p class="s3"><img src="pic/h1.png">Дата создания - 16 ноября 1961 года.</p>
-<p class="s3">Учредитель - Муниципальное образование "Город Киров". Функции и полномочия осуществляет администрация города Кирова. При этом функции и полномочия Учредителя в части реализации прав собственника имущества осуществляет управление (комитет) по делам муниципальной собственности города Кирова, функции и полномочия Учредителя в части формирования и утверждения муниципального задания и финансового обеспечения его выполнения осуществляет управление по делам молодежи, физической культуре и спорту администрации города Кирова.</p>
-<p class="s3">Адрес - г.Киров, ул. Октябрьский проспект 31.</p>
-<p class="s3">График работы администрации - с 8-00 до 17-00. Работа тренеров согласно расписания занятий.</p>
-<p class="s3">E-mail - dyssh2@mail.ru</p>
-<p class="s3">Контактные телефоны:</p>
-<p class="s3" style="padding-left:50px">Директор: (8332) 226-469</p>
-<p class="s3" style="padding-left:50px">Вахта: (8332) 228-469</p>
-<p class="s3" style="padding-left:50px">Спортивная часть: (8332) 227-470</p>
-<p class="s3" style="padding-left:50px">Хозяйственная часть: (8332) 227-469</p>
-<br/><br/>
-<br/><br/>
-<a title="Мы Вконтакте" href="https://vk.com/club161553232" target="_blank"><img src="pic/vk1.png"></a>
-<br/><br/>
-<br/><br/>  
-<a href="https://43.pfdo.ru/app/navigator?organization_id=27715&organization_name=МБУ СШ № 2" target="_blank" title="Наши программы в навигаторе ПФДО" style="width: 100%">
-<img src="https://pfdo.ru/img/logo.38159667.png" style="width: 100%" alt="ПФДО"></a>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<center><p font style="font-size: 25px">Информация о наборе</p></center>
-<br/><br/> 
-<br/><br/>
-<br/><br/>
-<br/><br/> 
-                                                                                    
-<a <font style="color:blue;font-size: 18px" >Спортивная школа №2 на карте</font></a>
-<br/><br/>
+<div class="main">
 
+<nav>
+  <a href="index.html">Сведения</a>
+  <a href="news.html">Новости</a>
+  <a href="sost.html">Состав</a>
+  <a href="doc.html">Документы</a>
+  <a href="obr.html">Виды спорта</a>
+  <a href="osn.html">Оснащенность</a>
+  <a href="std.html">Стенд</a>
+  <a href="ant.html">Антикоррупционная политика</a>
+  <a href="vak.html">Гражданам</a>
+  <a href="summer-camp.html">Летний лагерь 2025</a>
+  <a href="politikapersdan.html">Политика персональных данных</a>
+</nav>
 
-<div id="block-block-6" class="block block-block bot-map  last even">
-  <div class="gutter inner clearfix">
-            
-    <div class="content clearfix">
-      <div class="karta">
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&amp;width=747&amp;height=511&amp;lang=ru_RU&amp;scroll=true"></script>
+<section>
+
+<h1>Основные сведения</h1>
+
+<div class="info">
+  <p><strong>Дата создания:</strong> 16 ноября 1961 года</p>
+
+  <p><strong>Учредитель:</strong> Муниципальное образование «Город Киров».
+  Функции учредителя осуществляет администрация города Кирова.</p>
+
+  <p><strong>Адрес:</strong> г. Киров, ул. Октябрьский проспект, 31</p>
+
+  <p><strong>График работы администрации:</strong> 8:00 – 17:00</p>
+
+  <p><strong>E-mail:</strong> dyssh2@mail.ru</p>
+
+  <div class="contacts">
+    <p><strong>Контактные телефоны:</strong></p>
+    <p>Директор: (8332) 226-469</p>
+    <p>Вахта: (8332) 228-469</p>
+    <p>Спортивная часть: (8332) 227-470</p>
+    <p>Хозяйственная часть: (8332) 227-469</p>
+  </div>
 </div>
-<br/><br/>
-<br/><br/>
-<td width="*">&nbsp</td></tr>
 
+<div class="social">
+  <a href="https://vk.com/club161553232" target="_blank">
+    <img src="pic/vk1.png" alt="Мы ВКонтакте">
+  </a>
+</div>
 
+<a href="https://43.pfdo.ru/app/navigator?organization_id=27715&organization_name=МБУ СШ № 2" target="_blank">
+  <img src="https://pfdo.ru/img/logo.38159667.png" alt="ПФДО" style="width:100%;max-width:400px;">
+</a>
 
+<h1 style="margin-top:40px;">Спортивная школа №2 на карте</h1>
+
+<div class="map">
+<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&width=100%&height=500&lang=ru_RU&scroll=true"></script>
+</div>
+
+</section>
+</div>
+
+<footer>
+  © МБУ ДО СШ №2 города Кирова
+</footer>
+
+</div>
 </body>
 </html>
