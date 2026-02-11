@@ -3,26 +3,33 @@
 <head>
 <meta charset="utf-8">
 <title>МБУ ДО СШ № 2 — Спортивная школа №2 города Кирова</title>
-
 <link rel="icon" href="pic/Icon.ico">
 
 <style>
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ===== BASE ===== */
+/* ================= BASE ================= */
 body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: url("pic/ff1.jpg") center / cover fixed;
   color: #222;
   line-height: 1.6;
 }
 
-/* ===== LAYOUT ===== */
+body.lowvision {
+  background: none !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+/* ================= LAYOUT ================= */
 .wrapper {
   max-width: 1200px;
   margin: auto;
@@ -32,11 +39,20 @@ body {
   flex-direction: column;
 }
 
-/* ===== HEADER ===== */
+body.lowvision .wrapper {
+  background: #fff;
+}
+
+/* ================= HEADER ================= */
 header {
   text-align: center;
   padding: 25px 15px;
   background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+}
+
+body.lowvision header {
+  background: #000;
   color: #fff;
 }
 
@@ -45,27 +61,56 @@ header p {
 }
 
 header p:last-child {
-  font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-/* ===== MAIN ===== */
+/* ================= ACCESSIBILITY BUTTONS ================= */
+.access {
+  margin-top: 15px;
+}
+
+.access button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.access .on {
+  background: #000;
+  color: #fff;
+}
+
+.access .off {
+  background: #fff;
+  color: #000;
+}
+
+/* ================= MAIN ================= */
 .main {
   display: flex;
   flex: 1;
 }
 
-/* ===== MENU ===== */
+/* ================= MENU ================= */
 nav {
-  width: 220px;
+  width: 230px;
   background: #f3f6fb;
   border-right: 1px solid #ddd;
   padding: 20px;
 }
 
+body.lowvision nav {
+  background: #fff;
+  border-right: 3px solid #000;
+}
+
 nav a {
   display: block;
-  padding: 10px 12px;
+  padding: 12px;
   margin-bottom: 6px;
   text-decoration: none;
   color: #1e3c72;
@@ -78,7 +123,18 @@ nav a:hover {
   color: #fff;
 }
 
-/* ===== CONTENT ===== */
+body.lowvision nav a {
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+body.lowvision nav a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ================= CONTENT ================= */
 section {
   flex: 1;
   padding: 30px;
@@ -90,30 +146,32 @@ h1 {
   color: #1e3c72;
 }
 
+body.lowvision h1 {
+  color: #000;
+  font-size: 34px;
+  border-bottom: 3px solid #000;
+  padding-bottom: 10px;
+}
+
 .info p {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-size: 16px;
 }
 
-.info p strong {
-  color: #1e3c72;
+body.lowvision .info p {
+  font-size: 22px;
 }
 
-/* ===== CONTACTS ===== */
-.contacts p {
-  padding-left: 20px;
-}
-
-/* ===== SOCIAL ===== */
-.social {
-  margin: 30px 0;
-}
-
+/* ================= SOCIAL ================= */
 .social img {
   height: 45px;
 }
 
-/* ===== MAP ===== */
+body.lowvision img {
+  filter: grayscale(100%);
+}
+
+/* ================= MAP ================= */
 .map {
   margin-top: 30px;
   border-radius: 10px;
@@ -121,16 +179,27 @@ h1 {
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* ===== FOOTER ===== */
+body.lowvision .map {
+  box-shadow: none;
+  border: 3px solid #000;
+}
+
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 15px;
   background: #f3f6fb;
   font-size: 14px;
-  color: #555;
 }
 
-/* ===== RESPONSIVE ===== */
+body.lowvision footer {
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+  border-top: 3px solid #000;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .main {
     flex-direction: column;
@@ -155,6 +224,11 @@ footer {
 <header>
   <p>Муниципальное бюджетное учреждение дополнительного образования</p>
   <p>«Спортивная школа №2» города Кирова</p>
+
+  <div class="access">
+    <button class="on" onclick="enableLV()">Версия для слабовидящих</button>
+    <button class="off" onclick="disableLV()">Обычная версия</button>
+  </div>
 </header>
 
 <div class="main">
@@ -179,39 +253,12 @@ footer {
 
 <div class="info">
   <p><strong>Дата создания:</strong> 16 ноября 1961 года</p>
-
-  <p><strong>Учредитель:</strong> Муниципальное образование «Город Киров».
-  Функции учредителя осуществляет администрация города Кирова.</p>
-
-  <p><strong>Адрес:</strong> г. Киров, ул. Октябрьский проспект, 31</p>
-
-  <p><strong>График работы администрации:</strong> 8:00 – 17:00</p>
-
+  <p><strong>Адрес:</strong> г. Киров, Октябрьский проспект, 31</p>
   <p><strong>E-mail:</strong> dyssh2@mail.ru</p>
-
-  <div class="contacts">
-    <p><strong>Контактные телефоны:</strong></p>
-    <p>Директор: (8332) 226-469</p>
-    <p>Вахта: (8332) 228-469</p>
-    <p>Спортивная часть: (8332) 227-470</p>
-    <p>Хозяйственная часть: (8332) 227-469</p>
-  </div>
 </div>
-
-<div class="social">
-  <a href="https://vk.com/club161553232" target="_blank">
-    <img src="pic/vk1.png" alt="Мы ВКонтакте">
-  </a>
-</div>
-
-<a href="https://43.pfdo.ru/app/navigator?organization_id=27715&organization_name=МБУ СШ № 2" target="_blank">
-  <img src="https://pfdo.ru/img/logo.38159667.png" alt="ПФДО" style="width:100%;max-width:400px;">
-</a>
-
-<h1 style="margin-top:40px;">Спортивная школа №2 на карте</h1>
 
 <div class="map">
-<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&width=100%&height=500&lang=ru_RU&scroll=true"></script>
+<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&width=100%&height=450&lang=ru_RU"></script>
 </div>
 
 </section>
@@ -222,5 +269,22 @@ footer {
 </footer>
 
 </div>
+
+<script>
+function enableLV() {
+  document.body.classList.add('lowvision');
+  localStorage.setItem('lowvision', 'on');
+}
+
+function disableLV() {
+  document.body.classList.remove('lowvision');
+  localStorage.setItem('lowvision', 'off');
+}
+
+if (localStorage.getItem('lowvision') === 'on') {
+  enableLV();
+}
+</script>
+
 </body>
 </html>
