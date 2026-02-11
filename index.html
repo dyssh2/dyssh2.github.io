@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>МБУ ДО СШ № 2 — Спортивная школа №2 города Кирова</title>
+<title>МБУ ДО СШ №2 — Спортивная школа №2 города Кирова</title>
 <link rel="icon" href="pic/Icon.ico">
 
 <style>
@@ -22,8 +22,7 @@ body {
 }
 
 body.lowvision {
-  background: none !important;
-  background-color: #fff !important;
+  background: #fff !important;
   color: #000 !important;
   font-size: 20px;
   line-height: 1.9;
@@ -63,30 +62,6 @@ header p {
 header p:last-child {
   font-size: 22px;
   font-weight: bold;
-}
-
-/* ================= ACCESSIBILITY BUTTONS ================= */
-.access {
-  margin-top: 15px;
-}
-
-.access button {
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.access .on {
-  background: #000;
-  color: #fff;
-}
-
-.access .off {
-  background: #fff;
-  color: #000;
 }
 
 /* ================= MAIN ================= */
@@ -162,7 +137,15 @@ body.lowvision .info p {
   font-size: 22px;
 }
 
+.contacts p {
+  padding-left: 20px;
+}
+
 /* ================= SOCIAL ================= */
+.social {
+  margin: 30px 0;
+}
+
 .social img {
   height: 45px;
 }
@@ -187,7 +170,7 @@ body.lowvision .map {
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   background: #f3f6fb;
   font-size: 14px;
 }
@@ -197,6 +180,21 @@ body.lowvision footer {
   color: #000;
   font-size: 18px;
   border-top: 3px solid #000;
+}
+
+footer button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+footer button.active {
+  background: #000;
+  color: #fff;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -224,11 +222,6 @@ body.lowvision footer {
 <header>
   <p>Муниципальное бюджетное учреждение дополнительного образования</p>
   <p>«Спортивная школа №2» города Кирова</p>
-
-  <div class="access">
-    <button class="on" onclick="enableLV()">Версия для слабовидящих</button>
-    <button class="off" onclick="disableLV()">Обычная версия</button>
-  </div>
 </header>
 
 <div class="main">
@@ -252,37 +245,80 @@ body.lowvision footer {
 <h1>Основные сведения</h1>
 
 <div class="info">
-  <p><strong>Дата создания:</strong> 16 ноября 1961 года</p>
-  <p><strong>Адрес:</strong> г. Киров, Октябрьский проспект, 31</p>
+  <p><strong>Дата создания:</strong> 16 ноября 1961 года.</p>
+
+  <p><strong>Учредитель:</strong> Муниципальное образование «Город Киров».
+  Функции и полномочия осуществляет администрация города Кирова.
+  Функции собственника имущества — управление по делам муниципальной собственности города Кирова.
+  Формирование муниципального задания и финансового обеспечения —
+  управление по делам молодежи, физической культуре и спорту администрации города Кирова.</p>
+
+  <p><strong>Адрес:</strong> г. Киров, ул. Октябрьский проспект, 31.</p>
+
+  <p><strong>График работы администрации:</strong> с 8:00 до 17:00.
+  Работа тренеров согласно расписанию занятий.</p>
+
   <p><strong>E-mail:</strong> dyssh2@mail.ru</p>
+
+  <div class="contacts">
+    <p><strong>Контактные телефоны:</strong></p>
+    <p>Директор: (8332) 226-469</p>
+    <p>Вахта: (8332) 228-469</p>
+    <p>Спортивная часть: (8332) 227-470</p>
+    <p>Хозяйственная часть: (8332) 227-469</p>
+  </div>
 </div>
 
+<div class="social">
+  <a href="https://vk.com/club161553232" target="_blank">
+    <img src="pic/vk1.png" alt="Мы ВКонтакте">
+  </a>
+</div>
+
+<a href="https://43.pfdo.ru/app/navigator?organization_id=27715&organization_name=МБУ СШ № 2"
+   target="_blank">
+  <img src="https://pfdo.ru/img/logo.38159667.png"
+       alt="ПФДО"
+       style="width:100%;max-width:420px;">
+</a>
+
+<h1 style="margin-top:40px;">Спортивная школа №2 на карте</h1>
+
 <div class="map">
-<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&width=100%&height=450&lang=ru_RU"></script>
+<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&width=100%&height=500&lang=ru_RU&scroll=true"></script>
 </div>
 
 </section>
 </div>
 
 <footer>
-  © МБУ ДО СШ №2 города Кирова
+  © МБУ ДО СШ №2 города Кирова<br>
+
+  <button id="lvBtn" onclick="toggleLV()">Версия для слабовидящих</button>
 </footer>
 
 </div>
 
 <script>
-function enableLV() {
-  document.body.classList.add('lowvision');
-  localStorage.setItem('lowvision', 'on');
-}
+function toggleLV() {
+  document.body.classList.toggle('lowvision');
+  const btn = document.getElementById('lvBtn');
 
-function disableLV() {
-  document.body.classList.remove('lowvision');
-  localStorage.setItem('lowvision', 'off');
+  if (document.body.classList.contains('lowvision')) {
+    localStorage.setItem('lowvision', 'on');
+    btn.classList.add('active');
+    btn.textContent = 'Обычная версия';
+  } else {
+    localStorage.setItem('lowvision', 'off');
+    btn.classList.remove('active');
+    btn.textContent = 'Версия для слабовидящих';
+  }
 }
 
 if (localStorage.getItem('lowvision') === 'on') {
-  enableLV();
+  document.body.classList.add('lowvision');
+  document.getElementById('lvBtn').classList.add('active');
+  document.getElementById('lvBtn').textContent = 'Обычная версия';
 }
 </script>
 
