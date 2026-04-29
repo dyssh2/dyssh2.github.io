@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>МБУ ДО СШ №2 — Спортивная школа №2 города Кирова</title>
+<title>РњР‘РЈ Р”Рћ РЎРЁ в„–2 вЂ” РЎРїРѕСЂС‚РёРІРЅР°СЏ С€РєРѕР»Р° в„–2 РіРѕСЂРѕРґР° РљРёСЂРѕРІР°</title>
 <link rel="icon" href="pic/Icon.ico">
 
 <style>
@@ -44,10 +44,14 @@ body.lowvision .wrapper {
 
 /* ================= HEADER ================= */
 header {
-  text-align: center;
   padding: 25px 15px;
   background: linear-gradient(90deg, #1e3c72, #2a5298);
   color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 body.lowvision header {
@@ -55,13 +59,31 @@ body.lowvision header {
   color: #fff;
 }
 
-header p {
+.header-text {
+  flex: 1;
+}
+
+.header-text p {
   font-size: 18px;
 }
 
-header p:last-child {
+.header-text p:last-child {
   font-size: 22px;
   font-weight: bold;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.header-logo img {
+  max-height: 85px;
+  width: auto;
+  display: block;
+}
+
+body.lowvision .header-logo img {
+  filter: grayscale(100%);
 }
 
 /* ================= MAIN ================= */
@@ -211,6 +233,13 @@ footer button.active {
   nav a {
     margin: 5px;
   }
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-logo img {
+    max-height: 65px;
+  }
 }
 </style>
 </head>
@@ -220,69 +249,74 @@ footer button.active {
 <div class="wrapper">
 
 <header>
-  <p>Муниципальное бюджетное учреждение дополнительного образования</p>
-  <p>«Спортивная школа №2» города Кирова</p>
+  <div class="header-text">
+    <p>РњСѓРЅРёС†РёРїР°Р»СЊРЅРѕРµ Р±СЋРґР¶РµС‚РЅРѕРµ СѓС‡СЂРµР¶РґРµРЅРёРµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ</p>
+    <p>В«РЎРїРѕСЂС‚РёРІРЅР°СЏ С€РєРѕР»Р° в„–2В» РіРѕСЂРѕРґР° РљРёСЂРѕРІР°</p>
+  </div>
+  <div class="header-logo">
+    <img src="pic/logo.png" alt="Р›РѕРіРѕС‚РёРї РЎРїРѕСЂС‚РёРІРЅРѕР№ С€РєРѕР»С‹ в„–2">
+  </div>
 </header>
 
 <div class="main">
 
 <nav>
-  <a href="index.html">Сведения</a>
-  <a href="news.html">Новости</a>
-  <a href="sost.html">Состав</a>
-  <a href="doc.html">Документы</a>
-  <a href="obr.html">Виды спорта</a>
-  <a href="osn.html">Оснащенность</a>
-  <a href="std.html">Стенд</a>
-  <a href="ant.html">Антикоррупционная политика</a>
-  <a href="vak.html">Гражданам</a>
-  <a href="summer-camp.html">Летний лагерь 2025</a>
-  <a href="politikapersdan.html">Политика персональных данных</a>
+  <a href="index.html">РЎРІРµРґРµРЅРёСЏ</a>
+  <a href="news.html">РќРѕРІРѕСЃС‚Рё</a>
+  <a href="sost.html">РЎРѕСЃС‚Р°РІ</a>
+  <a href="doc.html">Р”РѕРєСѓРјРµРЅС‚С‹</a>
+  <a href="obr.html">Р’РёРґС‹ СЃРїРѕСЂС‚Р°</a>
+  <a href="osn.html">РћСЃРЅР°С‰РµРЅРЅРѕСЃС‚СЊ</a>
+  <a href="std.html">РЎС‚РµРЅРґ</a>
+  <a href="ant.html">РђРЅС‚РёРєРѕСЂСЂСѓРїС†РёРѕРЅРЅР°СЏ РїРѕР»РёС‚РёРєР°</a>
+  <a href="vak.html">Р“СЂР°Р¶РґР°РЅР°Рј</a>
+  <a href="summer-camp.html">Р›РµС‚РЅРёР№ Р»Р°РіРµСЂСЊ 2025</a>
+  <a href="politikapersdan.html">РџРѕР»РёС‚РёРєР° РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… РґР°РЅРЅС‹С…</a>
 </nav>
 
 <section>
 
-<h1>Основные сведения</h1>
+<h1>РћСЃРЅРѕРІРЅС‹Рµ СЃРІРµРґРµРЅРёСЏ</h1>
 
 <div class="info">
-  <p><strong>Дата создания:</strong> 16 ноября 1961 года.</p>
+  <p><strong>Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ:</strong> 16 РЅРѕСЏР±СЂСЏ 1961 РіРѕРґР°.</p>
 
-  <p><strong>Учредитель:</strong> Муниципальное образование «Город Киров».
-  Функции и полномочия осуществляет администрация города Кирова.
-  Функции собственника имущества — управление по делам муниципальной собственности города Кирова.
-  Формирование муниципального задания и финансового обеспечения —
-  управление по делам молодежи, физической культуре и спорту администрации города Кирова.</p>
+  <p><strong>РЈС‡СЂРµРґРёС‚РµР»СЊ:</strong> РњСѓРЅРёС†РёРїР°Р»СЊРЅРѕРµ РѕР±СЂР°Р·РѕРІР°РЅРёРµ В«Р“РѕСЂРѕРґ РљРёСЂРѕРІВ».
+  Р¤СѓРЅРєС†РёРё Рё РїРѕР»РЅРѕРјРѕС‡РёСЏ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚ Р°РґРјРёРЅРёСЃС‚СЂР°С†РёСЏ РіРѕСЂРѕРґР° РљРёСЂРѕРІР°.
+  Р¤СѓРЅРєС†РёРё СЃРѕР±СЃС‚РІРµРЅРЅРёРєР° РёРјСѓС‰РµСЃС‚РІР° вЂ” СѓРїСЂР°РІР»РµРЅРёРµ РїРѕ РґРµР»Р°Рј РјСѓРЅРёС†РёРїР°Р»СЊРЅРѕР№ СЃРѕР±СЃС‚РІРµРЅРЅРѕСЃС‚Рё РіРѕСЂРѕРґР° РљРёСЂРѕРІР°.
+  Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјСѓРЅРёС†РёРїР°Р»СЊРЅРѕРіРѕ Р·Р°РґР°РЅРёСЏ Рё С„РёРЅР°РЅСЃРѕРІРѕРіРѕ РѕР±РµСЃРїРµС‡РµРЅРёСЏ вЂ”
+  СѓРїСЂР°РІР»РµРЅРёРµ РїРѕ РґРµР»Р°Рј РјРѕР»РѕРґРµР¶Рё, С„РёР·РёС‡РµСЃРєРѕР№ РєСѓР»СЊС‚СѓСЂРµ Рё СЃРїРѕСЂС‚Сѓ Р°РґРјРёРЅРёСЃС‚СЂР°С†РёРё РіРѕСЂРѕРґР° РљРёСЂРѕРІР°.</p>
 
-  <p><strong>Адрес:</strong> г. Киров, ул. Октябрьский проспект, 31.</p>
+  <p><strong>РђРґСЂРµСЃ:</strong> Рі. РљРёСЂРѕРІ, СѓР». РћРєС‚СЏР±СЂСЊСЃРєРёР№ РїСЂРѕСЃРїРµРєС‚, 31.</p>
 
-  <p><strong>График работы администрации:</strong> с 8:00 до 17:00.
-  Работа тренеров согласно расписанию занятий.</p>
+  <p><strong>Р“СЂР°С„РёРє СЂР°Р±РѕС‚С‹ Р°РґРјРёРЅРёСЃС‚СЂР°С†РёРё:</strong> СЃ 8:00 РґРѕ 17:00.
+  Р Р°Р±РѕС‚Р° С‚СЂРµРЅРµСЂРѕРІ СЃРѕРіР»Р°СЃРЅРѕ СЂР°СЃРїРёСЃР°РЅРёСЋ Р·Р°РЅСЏС‚РёР№.</p>
 
   <p><strong>E-mail:</strong> dyssh2@mail.ru; axrdyssh2@mail.ru</p>
 
   <div class="contacts">
-    <p><strong>Контактные телефоны:</strong></p>
-    <p>Директор: (8332) 226-469</p>
-    <p>Вахта: (8332) 228-469</p>
-    <p>Спортивная часть: (8332) 227-470</p>
-    <p>Хозяйственная часть: (8332) 227-469</p>
+    <p><strong>РљРѕРЅС‚Р°РєС‚РЅС‹Рµ С‚РµР»РµС„РѕРЅС‹:</strong></p>
+    <p>Р”РёСЂРµРєС‚РѕСЂ: (8332) 226-469</p>
+    <p>Р’Р°С…С‚Р°: (8332) 228-469</p>
+    <p>РЎРїРѕСЂС‚РёРІРЅР°СЏ С‡Р°СЃС‚СЊ: (8332) 227-470</p>
+    <p>РҐРѕР·СЏР№СЃС‚РІРµРЅРЅР°СЏ С‡Р°СЃС‚СЊ: (8332) 227-469</p>
   </div>
 </div>
 
 <div class="social">
   <a href="https://vk.com/club161553232" target="_blank">
-    <img src="pic/vk1.png" alt="Мы ВКонтакте">
+    <img src="pic/vk1.png" alt="РњС‹ Р’РљРѕРЅС‚Р°РєС‚Рµ">
   </a>
 </div>
 
-<a href="https://43.pfdo.ru/app/navigator?organization_id=27715&organization_name=МБУ СШ № 2"
+<a href="https://43.pfdo.ru/app/navigator?organization_id=27715&organization_name=РњР‘РЈ РЎРЁ в„– 2"
    target="_blank">
   <img src="https://pfdo.ru/img/logo.38159667.png"
-       alt="ПФДО"
+       alt="РџР¤Р”Рћ"
        style="width:100%;max-width:420px;">
 </a>
 
-<h1 style="margin-top:40px;">Спортивная школа №2 на карте</h1>
+<h1 style="margin-top:40px;">РЎРїРѕСЂС‚РёРІРЅР°СЏ С€РєРѕР»Р° в„–2 РЅР° РєР°СЂС‚Рµ</h1>
 
 <div class="map">
 <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&width=100%&height=500&lang=ru_RU&scroll=true"></script>
@@ -292,9 +326,9 @@ footer button.active {
 </div>
 
 <footer>
-  © МБУ ДО СШ №2 города Кирова<br>
+  В© РњР‘РЈ Р”Рћ РЎРЁ в„–2 РіРѕСЂРѕРґР° РљРёСЂРѕРІР°<br>
 
-  <button id="lvBtn" onclick="toggleLV()">Версия для слабовидящих</button>
+  <button id="lvBtn" onclick="toggleLV()">Р’РµСЂСЃРёСЏ РґР»СЏ СЃР»Р°Р±РѕРІРёРґСЏС‰РёС…</button>
 </footer>
 
 </div>
@@ -307,18 +341,18 @@ function toggleLV() {
   if (document.body.classList.contains('lowvision')) {
     localStorage.setItem('lowvision', 'on');
     btn.classList.add('active');
-    btn.textContent = 'Обычная версия';
+    btn.textContent = 'РћР±С‹С‡РЅР°СЏ РІРµСЂСЃРёСЏ';
   } else {
     localStorage.setItem('lowvision', 'off');
     btn.classList.remove('active');
-    btn.textContent = 'Версия для слабовидящих';
+    btn.textContent = 'Р’РµСЂСЃРёСЏ РґР»СЏ СЃР»Р°Р±РѕРІРёРґСЏС‰РёС…';
   }
 }
 
 if (localStorage.getItem('lowvision') === 'on') {
   document.body.classList.add('lowvision');
   document.getElementById('lvBtn').classList.add('active');
-  document.getElementById('lvBtn').textContent = 'Обычная версия';
+  document.getElementById('lvBtn').textContent = 'РћР±С‹С‡РЅР°СЏ РІРµСЂСЃРёСЏ';
 }
 </script>
 
