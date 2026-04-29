@@ -44,14 +44,10 @@ body.lowvision .wrapper {
 
 /* ================= HEADER ================= */
 header {
+  text-align: center;
   padding: 25px 15px;
   background: linear-gradient(90deg, #1e3c72, #2a5298);
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 
 body.lowvision header {
@@ -59,31 +55,13 @@ body.lowvision header {
   color: #fff;
 }
 
-.header-text {
-  flex: 1;
-}
-
-.header-text p {
+header p {
   font-size: 18px;
 }
 
-.header-text p:last-child {
+header p:last-child {
   font-size: 22px;
   font-weight: bold;
-}
-
-.header-logo {
-  flex-shrink: 0;
-}
-
-.header-logo img {
-  max-height: 85px;
-  width: auto;
-  display: block;
-}
-
-body.lowvision .header-logo img {
-  filter: grayscale(100%);
 }
 
 /* ================= MAIN ================= */
@@ -233,13 +211,6 @@ footer button.active {
   nav a {
     margin: 5px;
   }
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .header-logo img {
-    max-height: 65px;
-  }
 }
 </style>
 </head>
@@ -249,13 +220,8 @@ footer button.active {
 <div class="wrapper">
 
 <header>
-  <div class="header-text">
-    <p>РњСѓРЅРёС†РёРїР°Р»СЊРЅРѕРµ Р±СЋРґР¶РµС‚РЅРѕРµ СѓС‡СЂРµР¶РґРµРЅРёРµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ</p>
-    <p>В«РЎРїРѕСЂС‚РёРІРЅР°СЏ С€РєРѕР»Р° в„–2В» РіРѕСЂРѕРґР° РљРёСЂРѕРІР°</p>
-  </div>
-  <div class="header-logo">
-    <img src="pic/logo.png" alt="Р›РѕРіРѕС‚РёРї РЎРїРѕСЂС‚РёРІРЅРѕР№ С€РєРѕР»С‹ в„–2">
-  </div>
+  <p>РњСѓРЅРёС†РёРїР°Р»СЊРЅРѕРµ Р±СЋРґР¶РµС‚РЅРѕРµ СѓС‡СЂРµР¶РґРµРЅРёРµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ</p>
+  <p>В«РЎРїРѕСЂС‚РёРІРЅР°СЏ С€РєРѕР»Р° в„–2В» РіРѕСЂРѕРґР° РљРёСЂРѕРІР°</p>
 </header>
 
 <div class="main">
@@ -292,7 +258,7 @@ footer button.active {
   <p><strong>Р“СЂР°С„РёРє СЂР°Р±РѕС‚С‹ Р°РґРјРёРЅРёСЃС‚СЂР°С†РёРё:</strong> СЃ 8:00 РґРѕ 17:00.
   Р Р°Р±РѕС‚Р° С‚СЂРµРЅРµСЂРѕРІ СЃРѕРіР»Р°СЃРЅРѕ СЂР°СЃРїРёСЃР°РЅРёСЋ Р·Р°РЅСЏС‚РёР№.</p>
 
-  <p><strong>E-mail:</strong> dyssh2@mail.ru; axrdyssh2@mail.ru</p>
+  <p><strong>E-mail:</strong> dyssh2@mail.ru</p>
 
   <div class="contacts">
     <p><strong>РљРѕРЅС‚Р°РєС‚РЅС‹Рµ С‚РµР»РµС„РѕРЅС‹:</strong></p>
