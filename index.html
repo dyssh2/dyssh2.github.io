@@ -1,216 +1,242 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<title>МБУ ДО СШ №2 — Спортивная школа №2 города Кирова</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МБУ ДО СШ №2 города Кирова</title>
 <link rel="icon" href="pic/Icon.ico">
 
 <style>
-/* ================= RESET ================= */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ================= BASE ================= */
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: url("pic/ff1.jpg") center / cover fixed;
-  color: #222;
-  line-height: 1.6;
+body{
+    font-family: Arial, sans-serif;
+    background:url("pic/ff1.jpg") center/cover fixed;
+    color:#222;
+    line-height:1.6;
 }
 
-body.lowvision {
-  background: #fff !important;
-  color: #000 !important;
-  font-size: 20px;
-  line-height: 1.9;
+.wrapper{
+    max-width:1300px;
+    margin:auto;
+    background:rgba(255,255,255,0.95);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
 
-/* ================= LAYOUT ================= */
-.wrapper {
-  max-width: 1200px;
-  margin: auto;
-  background: rgba(255,255,255,0.95);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#1e3c72,#2a5298);
+    color:white;
+    padding:20px;
 }
 
-body.lowvision .wrapper {
-  background: #fff;
+.header-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    text-align:center;
 }
 
-/* ================= HEADER ================= */
-header {
-  text-align: center;
-  padding: 25px 15px;
-  background: linear-gradient(90deg, #1e3c72, #2a5298);
-  color: #fff;
+.header-box img{
+    max-width:240px;
+    width:100%;
+    height:auto;
+    border-radius:8px;
 }
 
-body.lowvision header {
-  background: #000;
-  color: #fff;
+.header-text p:first-child{
+    font-size:18px;
 }
 
-header p {
-  font-size: 18px;
+.header-text p:last-child{
+    font-size:28px;
+    font-weight:bold;
 }
 
-header p:last-child {
-  font-size: 22px;
-  font-weight: bold;
+/* MAIN */
+.main{
+    display:flex;
+    flex:1;
 }
 
-/* ================= MAIN ================= */
-.main {
-  display: flex;
-  flex: 1;
+/* MENU */
+nav{
+    width:260px;
+    background:#f2f5fa;
+    padding:20px;
+    border-right:1px solid #ddd;
 }
 
-/* ================= MENU ================= */
-nav {
-  width: 230px;
-  background: #f3f6fb;
-  border-right: 1px solid #ddd;
-  padding: 20px;
+nav a{
+    display:block;
+    padding:12px;
+    margin-bottom:8px;
+    text-decoration:none;
+    color:#1e3c72;
+    border-radius:6px;
+    transition:0.2s;
+    font-weight:bold;
 }
 
-body.lowvision nav {
-  background: #fff;
-  border-right: 3px solid #000;
+nav a:hover{
+    background:#1e3c72;
+    color:white;
 }
 
-nav a {
-  display: block;
-  padding: 12px;
-  margin-bottom: 6px;
-  text-decoration: none;
-  color: #1e3c72;
-  border-radius: 6px;
-  font-weight: 500;
+/* CONTENT */
+section{
+    flex:1;
+    padding:35px;
 }
 
-nav a:hover {
-  background: #1e3c72;
-  color: #fff;
+h1{
+    font-size:32px;
+    margin-bottom:25px;
+    color:#1e3c72;
 }
 
-body.lowvision nav a {
-  color: #000;
-  font-size: 22px;
-  font-weight: bold;
+.info p{
+    margin-bottom:14px;
+    font-size:17px;
 }
 
-body.lowvision nav a:hover {
-  background: #000;
-  color: #fff;
+.contacts{
+    margin-top:15px;
+    padding-left:20px;
 }
 
-/* ================= CONTENT ================= */
-section {
-  flex: 1;
-  padding: 30px;
+.contacts p{
+    margin-bottom:8px;
 }
 
-h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #1e3c72;
+.social{
+    margin:30px 0;
 }
 
-body.lowvision h1 {
-  color: #000;
-  font-size: 34px;
-  border-bottom: 3px solid #000;
-  padding-bottom: 10px;
+.social img{
+    height:50px;
 }
 
-.info p {
-  margin-bottom: 14px;
-  font-size: 16px;
+.map{
+    margin-top:30px;
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-body.lowvision .info p {
-  font-size: 22px;
+/* FOOTER */
+footer{
+    background:#f2f5fa;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
 }
 
-.contacts p {
-  padding-left: 20px;
+footer button{
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    border-radius:6px;
+    background:#1e3c72;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
 }
 
-/* ================= SOCIAL ================= */
-.social {
-  margin: 30px 0;
+footer button:hover{
+    background:#16315c;
 }
 
-.social img {
-  height: 45px;
+/* LOWVISION */
+body.lowvision{
+    background:white !important;
+    color:black !important;
+    font-size:22px;
+    line-height:2;
 }
 
-body.lowvision img {
-  filter: grayscale(100%);
+body.lowvision .wrapper{
+    background:white;
 }
 
-/* ================= MAP ================= */
-.map {
-  margin-top: 30px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+body.lowvision header{
+    background:black;
+    color:white;
 }
 
-body.lowvision .map {
-  box-shadow: none;
-  border: 3px solid #000;
+body.lowvision nav{
+    background:white;
+    border-right:3px solid black;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #f3f6fb;
-  font-size: 14px;
+body.lowvision nav a{
+    color:black;
+    font-size:22px;
 }
 
-body.lowvision footer {
-  background: #fff;
-  color: #000;
-  font-size: 18px;
-  border-top: 3px solid #000;
+body.lowvision nav a:hover{
+    background:black;
+    color:white;
 }
 
-footer button {
-  margin-top: 10px;
-  padding: 10px 18px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 2px solid #000;
-  background: #fff;
-  cursor: pointer;
+body.lowvision h1{
+    color:black;
+    border-bottom:3px solid black;
+    padding-bottom:10px;
 }
 
-footer button.active {
-  background: #000;
-  color: #fff;
+body.lowvision .info p{
+    font-size:24px;
 }
 
-/* ================= RESPONSIVE ================= */
-max-width: 900px {
-  .main {
-    flex-direction: column;
-  }
-  nav {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  nav a {
-    margin: 5px;
-  }
+body.lowvision img{
+    filter:grayscale(100%);
+}
+
+body.lowvision footer{
+    background:white;
+    border-top:3px solid black;
+}
+
+body.lowvision footer button{
+    background:black;
+    color:white;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.main{
+    flex-direction:column;
+}
+
+nav{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    margin:5px;
+}
+
+section{
+    padding:20px;
+}
+
+.header-text p:last-child{
+    font-size:22px;
+}
+
 }
 </style>
 </head>
@@ -220,25 +246,32 @@ max-width: 900px {
 <div class="wrapper">
 
 <header>
-  <p>Муниципальное бюджетное учреждение дополнительного образования</p>
-  <p>«Спортивная школа №2» города Кирова</p>
+<div class="header-box">
+
+<img src="pic/90kirov.jpg" alt="90 лет Кировская область">
+
+<div class="header-text">
+<p>Муниципальное бюджетное учреждение дополнительного образования</p>
+<p>«Спортивная школа №2» города Кирова</p>
+</div>
+
+</div>
 </header>
 
 <div class="main">
 
 <nav>
-  <a href="index.html">Сведения</a>
-  <a href="news.html">Новости</a>
-  <a href="sost.html">Состав</a>
-  <a href="doc.html">Документы</a>
-  <a href="obr.html">Виды спорта</a>
-  <a href="osn.html">Оснащенность</a>
-  <a href="std.html">Стенд</a>
-  <a
-    href="ant.html">Антикоррупционная политика</a>
-  <a href="vak.html">Гражданам</a>
-  <a href="summer-camp.html">Летний лагерь 2025</a>
-  <a href="politikapersdan.html">Политика персональных данных</a>
+<a href="index.html">Сведения</a>
+<a href="news.html">Новости</a>
+<a href="sost.html">Состав</a>
+<a href="doc.html">Документы</a>
+<a href="obr.html">Виды спорта</a>
+<a href="osn.html">Оснащенность</a>
+<a href="std.html">Стенд</a>
+<a href="ant.html">Антикоррупционная политика</a>
+<a href="vak.html">Гражданам</a>
+<a href="summer-camp.html">Летний лагерь 2025</a>
+<a href="politikapersdan.html">Политика персональных данных</a>
 </nav>
 
 <section>
@@ -246,80 +279,78 @@ max-width: 900px {
 <h1>Основные сведения</h1>
 
 <div class="info">
-  <p><strong>Дата создания:</strong> 16 ноября 1961 года.</p>
 
-  <p><strong>Учредитель:</strong> Муниципальное образование «Город Киров».
-  Функции и полномочия осуществляет администрация города Кирова.
-  Функции собственника имущества — управление по делам муниципальной собственности города Кирова.
-  Формирование муниципального задания и финансового обеспечения —
-  управление по делам молодежи, физической культуре и спорту администрации города Кирова.</p>
+<p><strong>Дата создания:</strong> 16 ноября 1961 года.</p>
 
-  <p><strong>Адрес:</strong> г. Киров, ул. Октябрьский проспект, 31.</p>
+<p><strong>Учредитель:</strong> Муниципальное образование «Город Киров».  
+Функции и полномочия осуществляет администрация города Кирова.  
+Функции собственника имущества осуществляет управление по делам муниципальной собственности города Кирова.  
+Формирование муниципального задания и финансового обеспечения осуществляет управление по делам молодежи, физической культуре и спорту администрации города Кирова.</p>
 
-  <p><strong>График работы администрации:</strong> с 8:00 до 17:00.
-  Работа тренеров согласно расписанию занятий.</p>
-<p><strong>E-mail:</strong> dyssh2@mail.ru; axrdyssh2@mail.ru</p>
-  
+<p><strong>Адрес:</strong> г. Киров, ул. Октябрьский проспект, 31.</p>
 
-  <div class="contacts">
-    <p><strong>Контактные телефоны:</strong></p>
-    <p>Директор: (8332) 226-469</p>
-    <p>Вахта: (8332) 228-469</p>
-    <p>Спортивная часть: (8332) 227-470</p>
-    <p>Хозяйственная часть: (8332) 227-469</p>
-  </div>
+<p><strong>График работы администрации:</strong> с 8:00 до 17:00. Работа тренеров согласно расписанию занятий.</p>
+
+<p><strong>E-mail:</strong> dyssh2@mail.ru</p>
+
+<div class="contacts">
+<p><strong>Контактные телефоны:</strong></p>
+<p>Директор: (8332) 226-469</p>
+<p>Вахта: (8332) 228-469</p>
+<p>Спортивная часть: (8332) 227-470</p>
+<p>Хозяйственная часть: (8332) 227-469</p>
+</div>
+
 </div>
 
 <div class="social">
-  <a href="https://vk.com/club161553232&quot; target="_blank">
-    <img src="pic/vk1.png" alt="Мы ВКонтакте">
-  </a>
+<a href="https://vk.com/club161553232" target="_blank">
+<img src="pic/vk1.png" alt="Мы ВКонтакте">
+</a>
 </div>
 
-<a href="https://43.pfdo.ru/app/navigator?organization_id=27715&organization_name=МБУ СШ № 2"
-   target="_blank">
-  <img src="https://pfdo.ru/img/logo.38159667.png&quot;
-       alt="ПФДО"
-       style="width:100%;max-width:420px;">
+<a href="https://43.pfdo.ru/app/navigator?organization_id=27715&organization_name=МБУ СШ № 2" target="_blank">
+<img src="https://pfdo.ru/img/logo.38159667.png" style="max-width:420px;width:100%;" alt="ПФДО">
 </a>
 
 <h1 style="margin-top:40px;">Спортивная школа №2 на карте</h1>
 
 <div class="map">
-<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&width=100%&height=500&lang=ru_RU&scroll=true"></script&gt;
+<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d944f0a2f3516647b9cb649de25ae608f9d4a53e65f00c311967ae9e4d8ca6e&width=100%&height=500&lang=ru_RU&scroll=true"></script>
 </div>
 
 </section>
 </div>
 
 <footer>
-  © МБУ ДО СШ №2 города Кирова
+© МБУ ДО СШ №2 города Кирова<br>
 
-  <button id="lvBtn" onclick="toggleLV()">Версия для слабовидящих</button>
+<button onclick="toggleVision()" id="visionBtn">
+Версия для слабовидящих
+</button>
+
 </footer>
 
 </div>
 
 <script>
-function toggleLV() {
-  document.body.classList.toggle('lowvision');
-  const btn = document.getElementById('lvBtn');
+function toggleVision(){
+    document.body.classList.toggle("lowvision");
 
-  if (document.body.classList.contains('lowvision')) {
-    localStorage.setItem('lowvision', 'on');
-    btn.classList.add('active');
-    btn.textContent = 'Обычная версия';
-  } else {
-    localStorage.setItem('lowvision', 'off');
-    btn.classList.remove('active');
-    btn.textContent = 'Версия для слабовидящих';
-  }
+    let btn=document.getElementById("visionBtn");
+
+    if(document.body.classList.contains("lowvision")){
+        btn.innerText="Обычная версия";
+        localStorage.setItem("vision","on");
+    }else{
+        btn.innerText="Версия для слабовидящих";
+        localStorage.setItem("vision","off");
+    }
 }
 
-if (localStorage.getItem('lowvision') === 'on') {
-  document.body.classList.add('lowvision');
-  document.getElementById('lvBtn').classList.add('active');
-  document.getElementById('lvBtn').textContent = 'Обычная версия';
+if(localStorage.getItem("vision")==="on"){
+    document.body.classList.add("lowvision");
+    document.getElementById("visionBtn").innerText="Обычная версия";
 }
 </script>
 
